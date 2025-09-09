@@ -44,4 +44,4 @@ function loadHomePage() {
     return homepage;
 }
 
-export { loadHomePage } 
+export { loadHomePage };

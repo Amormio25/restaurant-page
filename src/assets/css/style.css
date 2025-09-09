@@ -225,14 +225,19 @@ form .input-group {
     transform: translateY(-1.5rem);
 }
 
-#contact-form label {
+#contact-form #message {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#message label {
     padding-top: 1rem;
 
     color: rgb(175, 175, 175);
     font-size: 1.25rem;
 }
 
-#contact-form textarea {
+#message textarea {
     padding: 0.75rem;
     border: none;
     border-radius: 8px;
@@ -245,7 +250,7 @@ form .input-group {
     font-size: 1rem;
 }
 
-#contact-form button {
+#message button {
     padding: 0.75rem 0.5rem;
     border: none;
     border-radius: 6px;
@@ -256,6 +261,6 @@ form .input-group {
     font-weight: 600;
 }
 
-#contact-form button:hover {
+#message button:hover {
     background-color: rgb(0, 125, 235);
 }

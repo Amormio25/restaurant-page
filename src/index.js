@@ -1,7 +1,8 @@
 import { loadHomePage } from "./homepage";
+import { loadContactPage } from "./contact";
 import "./assets/css/style.css";
 
 const content = document.querySelector("#content");
 
-// content.appendChild(loadHomePage());
+content.appendChild(loadContactPage());
 console.log("hello")
