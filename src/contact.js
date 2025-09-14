@@ -38,15 +38,15 @@ function createContactForm() {
     const formDiv = document.createElement("div");
     formDiv.id = "contact-form";
     
-    const headingDiv = document.createElement("h3");
-    headingDiv.textContent = "Send us a Message"
+    const heading = document.createElement("h3");
+    heading.textContent = "Send us a Message"
 
     const formElement = document.createElement("form");
     formElement.appendChild(createInputGroup("name", "text"));
     formElement.appendChild(createInputGroup("email", "email"));
     formElement.appendChild(createMessageSection());
 
-    formDiv.appendChild(headingDiv);
+    formDiv.appendChild(heading);
     formDiv.appendChild(formElement);
 
     return formDiv;
@@ -81,7 +81,7 @@ function createMessageSection() {
 
     const textArea = document.createElement("textarea");
     textArea.id = "message";
-    textArea.rows = 5;
+    textArea.rows = 3;
     textArea.required = true;
 
     const button = document.createElement("button");

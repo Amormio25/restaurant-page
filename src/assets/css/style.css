@@ -10,7 +10,51 @@ body {
 }
 
 #content {
+    transition: 0.3s;
+}
 
+/*************************** HEADER ***************************/
+header nav {
+    position: absolute;
+    width: 100%;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+
+    z-index: 2;
+}
+
+nav button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-bottom: 2px solid transparent;
+    border-radius: 4px;
+    background-color: transparent;
+
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 500;
+
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+nav button:hover {
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+nav button.active {
+    border-bottom: 2px solid white;
+    border-radius: 0px;
+}
+
+nav button.active:hover {
+    border-radius: 4px;
 }
 
 /*************************** HOMEPAGE ***************************/
@@ -100,11 +144,82 @@ body {
     font-size: clamp(1.1rem, 2vw, 1.25rem);
 }
 
+/*************************** MENU ***************************/
+#menu {
+    position: relative;
+    height: 100vh;
+    padding: 5rem;
+    background-color: black;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 1;
+}
+
+#menu::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url("../images/night-stand.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+
+    filter: blur(4px); 
+    opacity: 0.75; 
+}
+
+#menu #menu-overlay {
+    position: relative;
+    width: 85vw;
+    min-width: 350px;
+    height: auto;
+    overflow-y: scroll;
+    padding: 2.5rem;
+
+    border-radius: 14px;
+    background-color: rgb(18, 15, 15);
+
+    opacity: 0.8;
+    color: white;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 5rem 2rem;
+}
+
+#menu .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem 5rem;
+}
+
+.item img {
+    width: 250px;
+}
+
+.item span {
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
 /*************************** CONTACT ***************************/
 
 #contact {
     position: relative;
     height: 100vh;
+    padding: 5rem;
     background-color: black;
 
     color: white;
@@ -137,9 +252,11 @@ body {
 #contact #overlay {
     position: relative;
     width: 60vw;
-    height: 80vh;
+    min-width: 350px;
+    height: 85vh;
     padding: 2.5rem;
     border-radius: 14px;
+    /* margin-top: 0.5rem; */
     background-color: rgb(18, 15, 15);
 
     opacity: 0.8;
@@ -147,29 +264,37 @@ body {
 
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    justify-content: space-around;
 }
 
 #overlay h1 {
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 5vw, 3rem);
+
+    /* font-size: 3rem; */
     display: flex;
     justify-content: center;
 }
 
+@media (max-width: 768px) {
+    #overlay h1 {
+        text-align: center;
+    }
+}
+
 #overlay #contact-info {
+    padding: 0.5rem 0;
     line-height: 2rem;
     opacity: 0.75;
 
-    font-size: 1.25rem;
-}
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
 
-#overlay #contact-form {
-
+    /* font-size: 1.25rem; */
 }
 
 #contact-form h3 {
-    padding: 2rem 0 1rem 0;
-    font-size: 1.75rem;
+    padding: 1rem 0;
+    /* font-size: 1.75rem; */
+    font-size: clamp(1.5rem, 2.5vw, 1.75rem);
 }
 
 #contact-form form {
@@ -183,7 +308,7 @@ form .input-group {
 }
 
 .input-group input {
-    width: 50%;
+    width: 100%;
     padding: 0.5rem 0;
     margin-top: 1rem;
     background-color: transparent;
@@ -195,7 +320,9 @@ form .input-group {
     resize: none;
 
     color: white;
-    font-size: 1.25rem; 
+    /* font-size: 1.25rem;  */
+    font-size: clamp(1rem, 2vw, 1.25rem);
+
 }
 
 .input-group span {
@@ -228,7 +355,7 @@ form .input-group {
 #contact-form #message {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.25em;
 }
 #message label {
     padding-top: 1rem;
@@ -238,6 +365,7 @@ form .input-group {
 }
 
 #message textarea {
+    /* height: 20%; */
     padding: 0.75rem;
     border: none;
     border-radius: 8px;

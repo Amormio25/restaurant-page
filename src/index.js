@@ -1,8 +1,3 @@
-import { loadHomePage } from "./homepage";
-import { loadContactPage } from "./contact";
-import "./assets/css/style.css";
+import { displayWebsite } from "./website";
 
-const content = document.querySelector("#content");
-
-content.appendChild(loadContactPage());
-console.log("hello")
+// displayWebsite();
