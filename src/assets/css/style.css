@@ -9,11 +9,8 @@ body {
     background-color: black;
 }
 
-#content {
-    transition: 0.3s;
-}
-
 /*************************** HEADER ***************************/
+
 header nav {
     position: absolute;
     width: 100%;
@@ -44,6 +41,7 @@ nav button {
 nav button:hover {
     border-radius: 4px;
     background-color: white;
+
     color: black;
     transition: 0.3s;
 }
@@ -75,6 +73,7 @@ nav button.active:hover {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+
     z-index: 1;
 }
 
@@ -183,18 +182,19 @@ nav button.active:hover {
     width: 85vw;
     min-width: 350px;
     height: auto;
-    overflow-y: scroll;
     padding: 2.5rem;
-
     border-radius: 14px;
     background-color: rgb(18, 15, 15);
 
-    opacity: 0.8;
-    color: white;
+
 
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 5rem 2rem;
+
+    color: white;
+    overflow-y: scroll;
+    opacity: 0.8;
 }
 
 #menu .item {
@@ -230,6 +230,7 @@ nav button.active:hover {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+
     z-index: 1;
 }
 
@@ -257,21 +258,19 @@ nav button.active:hover {
     height: 85vh;
     padding: 2.5rem;
     border-radius: 14px;
-    /* margin-top: 0.5rem; */
     background-color: rgb(18, 15, 15);
-
-    opacity: 0.8;
-    color: white;
 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
+    color: white;
+    opacity: 0.8;
 }
 
 #overlay h1 {
     font-size: clamp(2.5rem, 5vw, 3rem);
 
-    /* font-size: 3rem; */
     display: flex;
     justify-content: center;
 }
@@ -284,17 +283,14 @@ nav button.active:hover {
 
 #overlay #contact-info {
     padding: 0.5rem 0;
-    line-height: 2rem;
-    opacity: 0.75;
 
     font-size: clamp(1rem, 2.5vw, 1.25rem);
-
-    /* font-size: 1.25rem; */
+    line-height: 2rem;
+    opacity: 0.75;
 }
 
 #contact-form h3 {
     padding: 1rem 0;
-    /* font-size: 1.75rem; */
     font-size: clamp(1.5rem, 2.5vw, 1.75rem);
 }
 
@@ -311,19 +307,17 @@ form .input-group {
 .input-group input {
     width: 100%;
     padding: 0.5rem 0;
-    margin-top: 1rem;
-    background-color: transparent;
     border: none;
     border-bottom: 1px solid white;
+    margin-top: 1rem;
+    background-color: transparent;
 
     text-align: left;
     outline: none;
     resize: none;
 
     color: white;
-    /* font-size: 1.25rem;  */
     font-size: clamp(1rem, 2vw, 1.25rem);
-
 }
 
 .input-group span {
@@ -366,7 +360,6 @@ form .input-group {
 }
 
 #message textarea {
-    /* height: 20%; */
     padding: 0.75rem;
     border: none;
     border-radius: 8px;
