@@ -1,7 +1,7 @@
 # restaurant-page
-<img src="./library-demo.png" width="600" alt="demo pic">
+<img src="./demo-pic.png" width="600" alt="demo pic">
 
-#### Check the live demo here -> 
+#### Check the live demo here -> https://amormio25.github.io/restaurant-page/
 
 ## Features 
 - Modular code using ES6 modules with imports and exports for better organization
