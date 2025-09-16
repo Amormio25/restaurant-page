@@ -1,3 +1,3 @@
 import { displayWebsite } from "./website";
 
-// displayWebsite();
+displayWebsite();
